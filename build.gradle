@@ -1,0 +1,47 @@
+plugins {
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.1.14'
+    id 'java'
+}
+
+group = 'com.challenge'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+dependencies {
+    // Serenity BDD
+    implementation 'net.serenity-bdd:serenity-core:4.1.14'
+    implementation 'net.serenity-bdd:serenity-screenplay:4.1.14'
+    implementation 'net.serenity-bdd:serenity-screenplay-rest:4.1.14'
+    testImplementation 'net.serenity-bdd:serenity-junit5:4.1.14'
+    
+    // Jackson for JSON serialization/deserialization
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.0'
+    
+    // AssertJ for fluid assertions
+    testImplementation 'org.assertj:assertj-core:3.25.3'
+    
+    // Lombok to reduce boilerplate
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testCompileOnly 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+    
+    // Datafaker for dynamic data (Bonus point)
+    implementation 'net.datafaker:datafaker:2.1.0'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        showStandardStreams = true
+    }
+}

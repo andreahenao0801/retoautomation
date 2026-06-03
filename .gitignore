@@ -1,0 +1,22 @@
+# Gradle
+.gradle/
+build/
+
+# Serenity BDD reports and target files
+target/
+
+# IDE configurations
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+bin/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
