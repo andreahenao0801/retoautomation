@@ -8,7 +8,7 @@ import lombok.Data;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserRequest {
-    private String name;
-    private String username;
-    private String email;
+  private String name;
+  private String username;
+  private String email;
 }

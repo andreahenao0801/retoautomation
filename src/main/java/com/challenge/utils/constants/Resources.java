@@ -1,15 +1,15 @@
 package com.challenge.utils.constants;
 
 public enum Resources {
-    USERS("/users");
+  USERS("/users");
 
-    private final String value;
+  private final String value;
 
-    Resources(String value) {
-        this.value = value;
-    }
+  Resources(String value) {
+    this.value = value;
+  }
 
-    public String getValue() {
-        return value;
-    }
+  public String getValue() {
+    return value;
+  }
 }

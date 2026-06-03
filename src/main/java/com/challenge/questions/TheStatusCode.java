@@ -6,12 +6,12 @@ import net.serenitybdd.screenplay.Question;
 
 public class TheStatusCode implements Question<Integer> {
 
-    @Override
-    public Integer answeredBy(Actor actor) {
-        return SerenityRest.lastResponse().statusCode();
-    }
+  @Override
+  public Integer answeredBy(Actor actor) {
+    return SerenityRest.lastResponse().statusCode();
+  }
 
-    public static TheStatusCode was() {
-        return new TheStatusCode();
-    }
+  public static TheStatusCode was() {
+    return new TheStatusCode();
+  }
 }

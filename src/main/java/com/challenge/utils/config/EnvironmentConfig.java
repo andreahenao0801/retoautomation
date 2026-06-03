@@ -5,10 +5,10 @@ import net.thucydides.model.environment.SystemEnvironmentVariables;
 import net.thucydides.model.util.EnvironmentVariables;
 
 public class EnvironmentConfig {
-    private static final EnvironmentVariables environmentVariables = SystemEnvironmentVariables.createEnvironmentVariables();
+  private static final EnvironmentVariables environmentVariables =
+      SystemEnvironmentVariables.createEnvironmentVariables();
 
-    public static String getBaseUrl() {
-        return EnvironmentSpecificConfiguration.from(environmentVariables)
-                .getProperty("api.base.url");
-    }
+  public static String getBaseUrl() {
+    return EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("api.base.url");
+  }
 }

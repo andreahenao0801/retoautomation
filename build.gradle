@@ -1,6 +1,7 @@
 plugins {
     id 'net.serenity-bdd.serenity-gradle-plugin' version '4.1.14'
     id 'java'
+    id 'com.diffplug.spotless' version '6.25.0'
 }
 
 group = 'com.challenge'
@@ -43,5 +44,14 @@ test {
     useJUnitPlatform()
     testLogging {
         showStandardStreams = true
+    }
+}
+
+spotless {
+    java {
+        googleJavaFormat()
+        removeUnusedImports()
+        trimTrailingWhitespace()
+        endWithNewline()
     }
 }
